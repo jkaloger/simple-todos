@@ -12,7 +12,7 @@ Template.body.onCreated(function bodyOnCreated() {
 
 Template.body.helpers({
 	tasks() {
-		const instance = Tempalte.instance();
+		const instance = Template.instance();
 		// when hide completed checked, do that
 		if(instance.state.get('hideCompleted')) {
 			return Tasks.find({ checked: { $ne: true } },
