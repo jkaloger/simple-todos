@@ -8,4 +8,4 @@ Template.body.helpers({
 	tasks() {
 		return Tasks.find({});
 	},
-})
+});
