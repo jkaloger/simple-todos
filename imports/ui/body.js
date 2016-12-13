@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
@@ -40,6 +41,8 @@ Template.body.events({
 			text,
 			// set as current time
 			createdAt: new Date(),
+			owner: Meteor.userId(),
+			username: Meteor.user().username;
 		});
 
 		// clear
